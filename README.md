@@ -17,13 +17,15 @@ Includes PromptTemplates, LLM Wrappers, and Chain Classes
 
 🛠️ LangChain in this Project
 In this application, LangChain is used for:
+                          
+	    	    
 
-Component	LangChain                 Feature Used	                          Purpose
-Blog Title Generation	    PromptTemplate + HuggingFaceEndpoint	    Generates 10 catchy blog titles
+| **Component Langchain**       | Feature Used                           |   Purpose
+|--------------------|---------------------------------------------------| ---------------------------------------------------
+|  Blog Title Generation     | PromptTemplate + HuggingFaceEndpoint          | Generates 10 catchy blog titles|
+|Blog Content Generation	   | PromptTemplate + HuggingFaceEndpoint            | Writes full blog post based on selected title and inputs |
 
-
-
-Blog Content Generation	  PromptTemplate + HuggingFaceEndpoint	    Writes full blog post based on selected title and inputs
+  	    
 
 🔄 SimpleSequentialChain vs SequentialChain
 LangChain provides two helpful chaining utilities for running multiple prompts/tasks step-by-step.
@@ -56,7 +58,7 @@ Great for linear flows like:
 
 Generate title → 2. Generate outline → 3. Generate blog
 
-🔀 SequentialChain
+🔀** SequentialChain**
 Allows defining custom input/output keys for each step.
 
 Useful for complex workflows (e.g., translating, summarizing, formatting)
