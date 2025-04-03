@@ -20,6 +20,9 @@ In this application, LangChain is used for:
 
 Component	LangChain                 Feature Used	                          Purpose
 Blog Title Generation	    PromptTemplate + HuggingFaceEndpoint	    Generates 10 catchy blog titles
+
+
+
 Blog Content Generation	  PromptTemplate + HuggingFaceEndpoint	    Writes full blog post based on selected title and inputs
 
 🔄 SimpleSequentialChain vs SequentialChain
@@ -30,17 +33,17 @@ Use Case: A linear sequence where output of one step becomes input of the next
 
 Structure: No need to explicitly define input/output keys
 
-LangChain in Action
+**LangChain in Action**
 LangChain makes it easy to organize complex prompt workflows:
 
-✅ PromptTemplate
+✅ **PromptTemplate**
 Used to design dynamic input prompts for:
 
 Generating blog titles based on a topic
 
 Creating a full blog post based on tone, audience, keywords, and blog length
 
-✅ HuggingFaceEndpoint
+✅** HuggingFaceEndpoint**
 Connects directly to Hugging Face models like meta-llama/Meta-Llama-3-8B-Instruct.
 
 🔄 LangChain Chaining Strategies
