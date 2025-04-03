@@ -18,10 +18,9 @@ Includes PromptTemplates, LLM Wrappers, and Chain Classes
 🛠️ LangChain in this Project
 In this application, LangChain is used for:
 
-Component	LangChain Feature Used	Purpose
-Blog Title Generation	PromptTemplate + HuggingFaceEndpoint	Generates 10 catchy blog titles
-Blog Content Generation	PromptTemplate + HuggingFaceEndpoint	Writes full blog post based on selected title and inputs
-You're using PromptTemplate to structure your LLM queries and HuggingFaceEndpoint to access the LLaMA 3 model via Hugging Face.
+Component	LangChain                 Feature Used	                          Purpose
+Blog Title Generation	    PromptTemplate + HuggingFaceEndpoint	    Generates 10 catchy blog titles
+Blog Content Generation	  PromptTemplate + HuggingFaceEndpoint	    Writes full blog post based on selected title and inputs
 
 🔄 SimpleSequentialChain vs SequentialChain
 LangChain provides two helpful chaining utilities for running multiple prompts/tasks step-by-step.
@@ -31,7 +30,37 @@ Use Case: A linear sequence where output of one step becomes input of the next
 
 Structure: No need to explicitly define input/output keys
 
+LangChain in Action
+LangChain makes it easy to organize complex prompt workflows:
 
+✅ PromptTemplate
+Used to design dynamic input prompts for:
+
+Generating blog titles based on a topic
+
+Creating a full blog post based on tone, audience, keywords, and blog length
+
+✅ HuggingFaceEndpoint
+Connects directly to Hugging Face models like meta-llama/Meta-Llama-3-8B-Instruct.
+
+🔄 LangChain Chaining Strategies
+While your current version uses standalone prompts, LangChain supports:
+
+🔁 SimpleSequentialChain
+Automatically passes output of one step to the next.
+
+Great for linear flows like:
+
+Generate title → 2. Generate outline → 3. Generate blog
+
+🔀 SequentialChain
+Allows defining custom input/output keys for each step.
+
+Useful for complex workflows (e.g., translating, summarizing, formatting)
+
+These can help you expand your app later to support multi-step pipelines like:
+
+Generate titles → generate outline → generate blog → summarize → SEO polish
 
 ## 🧠 Tech Stack
 
